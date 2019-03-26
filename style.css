@@ -1,0 +1,634 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --white: white;
+    --black: black;
+    --light: #bbb8d9;
+    --dark: #4a4099;
+    --fontcolor: #0a0a0a;
+}
+
+html {
+    font-family: Nunito,sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    
+}
+
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    
+    
+}
+
+.nav-main {
+    display: flex;
+    background: var(--dark);
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    
+}
+
+.nav-main a {
+    color: white;
+    
+}
+
+.nav-main li.active, .nav-main a.active {
+    color: var(--light);
+    transform: rotate(5deg) scale(1.2);
+}
+
+.logo img {
+    height: 4rem;
+    padding: .5rem;
+}
+
+
+.nav-main-items {
+    position: relative;  
+}
+
+.nav-main-items a:hover {
+    color: var(--light);
+
+}
+
+    .dropdown {
+        display: none;
+        pointer-events: none;
+        position: absolute;
+        opacity: 0;
+            background: var(--dark);
+            transition: opacity ease 0.2s;
+        padding: 1rem 0 1rem 0;
+        width: 18rem;  
+        
+       
+    }
+        .dropdown li {
+            padding: 1rem;
+            
+        }
+
+        .dropdown a {
+            display: block;
+            font-size: 13px;
+            text-transform: none;
+        }
+
+        .dropdown a:hover {
+            color: var(--light);
+        }
+
+            .dropdown-products:hover > ul {
+                opacity: 1;
+                display: block;
+                pointer-events: all;
+            }
+
+        .dropdown-two {
+            pointer-events: none;
+            position: absolute;
+            opacity: 0;
+            background: var(--black);
+            transition: opacity ease 0.2s;
+            left: 18rem;
+            bottom: 4.2rem;
+            background: black;
+            width: 16rem;
+        }
+
+            .dropdown-two a:hover {
+                color: grey;
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .listadd-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+        .plus {
+               color: red;
+               font-size: 18px;
+        }
+
+/* MOBILE MENU DROPDOWN START */
+.hamburger {
+    display: none;
+    }
+        
+        .mobile-menu {
+            display: none;
+            pointer-events: none;
+            width: 100%;
+            height: 20rem;
+            opacity: 0;
+            background: var(--dark);
+            transition: opacity ease 0.3s;
+        }
+        
+        input[type=checkbox] {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+         }
+         
+         /* Toggled State */
+         input[type=checkbox]:checked ~ .mobile-menu {
+            opacity: 1;
+            display: block;
+            pointer-events: all;
+         } 
+        
+         .mobile-menu-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1rem;
+            text-transform: uppercase;
+            font-size: .8rem;
+            letter-spacing: 3px;
+            height: 100%;
+            
+        }
+        
+        .mobile-menu-list a {
+            color: white;
+            
+        }
+        
+        .mobile-menu-list a:hover {
+            color: #feebb7;
+            cursor: pointer;
+            
+        }
+/* MOBILE MENU DROPDOWN END */
+
+.lines {
+ display: flex;
+}
+
+.line {
+    height: .4rem;  
+    flex: 0 1 33.3333vw
+}
+.line.white {
+    background-color: white;
+}
+
+.line.red {
+    background-color: var(--dark);
+}
+
+.line.yellow {
+    background-color: var(--light);
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.hero{
+    width: 100%;
+    margin-top: 68px;
+    
+  }
+
+.mobileimg {
+    display: none;
+}
+
+.index-hero-img {
+    background-image: url('images/indexhero.jpg');
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.index-hero-img:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.drumlessen-hero-img {
+    background-image: url('images/heroimg.jpg');
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workshops-hero-img {
+    background-image: url('images/groepslessen.jpg');
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voorstellingen-hero-img {
+    background-image: url('images/banwakaboom.jpg');
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+    color: white;
+    font-size: 6rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title .red {
+    color: #75021f;
+}
+
+.hero-title .yellow {
+    color: #feebb7;
+}
+  
+.block {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+}
+
+.block.block-products {
+    color: black;
+
+}
+
+.block.block-videos {
+    background: var(--light);
+
+}
+
+.featured-products {
+    grid-column: 2;
+
+}
+
+.featured-videos {
+    grid-column: 2;
+}
+
+.product {
+    background: #fafafa;
+    /* padding: 1rem; */
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+    /* display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between; */
+}
+
+.product:hover {
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.product p {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.boeknu {
+    padding: .6rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 20rem;
+    align-self: center;
+    color: white;
+    background-color: var(--dark);
+    border-radius: 2rem;
+    font-size: 1.1rem;
+}
+
+.product-img {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.product-img img {
+    border-top-right-radius : 4px;
+    border-top-left-radius : 4px;
+
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  .iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.video-btn {
+    grid-row: 1;
+    grid-column: 1;
+    color: white;
+    z-index: 2;
+    /* position: absolute; */
+
+    height: 100%;
+    width: 100%;
+
+    /* top: 50%;
+    left: 50%;
+    margin-left: -3.5rem;
+    margin-top: -2rem; */
+    
+
+    font-size: 2em;
+  
+    height: 1.4em;
+    width: 3em;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+    padding: 0;
+    cursor: pointer;
+    opacity: 1;
+    border: 1px solid #fff;
+    background-color: #2B333F;
+    background-color: rgba(43, 51, 63, 0.7);
+    border-radius: 0.3em;
+    transition: all 0.4s;
+    
+    
+}
+
+.video-btn:focus {
+    outline:none;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.products-header {
+    text-align: center;
+    letter-spacing: -1px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.products-header span {
+    color: #75021f;
+}
+
+.header-text {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.product-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+
+.who-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.product.person {
+    display: grid;
+    grid-template-rows: 20rem auto;
+}
+
+
+
+.product-caption {
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+.product-title {
+    padding-left: 1rem;
+}
+  
+.footer {
+    color: black;
+    background: var(--dark);
+    text-align: center;
+
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.footer-title {
+    font-size: 25px;
+    font-weight: 100;   
+}
+
+.socialmedia-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.socialmedia-nav li {
+    margin: 1rem;
+}
+
+.socialmedia-nav .twitter {
+    background: url(https://www.pathe.nl/assets/img/icons/social/twitter@2x.png);
+    background-size: cover;
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
+.socialmedia-nav .fb {
+    background: url(https://www.pathe.nl/assets/img/icons/social/facebook@2x.png);
+    background-size: cover;
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
+.socialmedia-nav .insta {
+    background: url(https://www.pathe.nl/assets/img/icons/social/instagram@2x.png);
+    background-size: cover;
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
+.copyright {
+    font-size: 10px;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: .5rem;
+   
+}
+
+.footer-links li {
+    margin: 0 .2rem 0 .2rem;
+}
+
+.footer a {
+    color: var(--black);
+}
+
+.footer a:hover {
+    cursor: pointer;
+    color: #1779ba;
+}
+
+.extra-link {
+    font-size: 10px;
+   
+}
+
+@media screen and (max-width: 1000px) {
+
+    .mobileimg {
+        display: initial;
+    }
+    
+    .index-hero-img {
+        display: none;
+    }
+
+    .drumlessen-hero-img {
+        display: none;
+    }
+
+    .workshops-hero-img {
+        display: none;
+    }
+
+    .voorstellingen-hero-img {
+        display: none;
+    }
+
+   .nav-main li:nth-child(n+3) { 
+       display: none;
+    }
+
+    .nav-main {
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+        width: 2rem;
+        margin-left: 1rem;
+        position: absolute;
+        left: 0;
+        
+    }
+
+    .hamburger-link {
+        cursor: pointer;
+    }
+
+    .nav-main-items.nav-logo {
+        /* flex: 1; */
+        text-align: center;
+        margin-left: -10px;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1000px) {
+    .mobile-menu-list {
+        display: none;
+    }
+
+    input[type=checkbox]:checked ~ .mobile-menu {
+        display: none;
+        
+        width: 100%;
+        height: 20rem;
+     } 
+}
+
+
