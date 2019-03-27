@@ -29,6 +29,7 @@ img {
     max-width: 100%;
 }
 
+
 body {
     margin: 0;
     display: grid;
@@ -190,7 +191,7 @@ body {
         }
         
         .mobile-menu-list a:hover {
-            color: #feebb7;
+            color: var(--light);
             cursor: pointer;
             
         }
@@ -208,11 +209,11 @@ body {
     background-color: white;
 }
 
-.line.red {
+.line.purple {
     background-color: var(--dark);
 }
 
-.line.yellow {
+.line.lightpurple {
     background-color: var(--light);
 }
 
@@ -445,11 +446,20 @@ main {
     letter-spacing: -1px;
     font-size: 2.5rem;
     font-weight: 600;
+    padding: 0;
+
 }
 
-.products-header span {
-    color: #75021f;
+.products-sub-header {
+    text-align: center;
+    letter-spacing: -1px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0;
+    margin: -2rem 0 1rem 0;
 }
+
+
 
 .header-text {
     text-align: center;
@@ -499,6 +509,12 @@ main {
 .footer-title {
     font-size: 25px;
     font-weight: 100;   
+}
+
+.footer-sub-title {
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
 }
 
 .socialmedia-nav {
@@ -563,6 +579,10 @@ main {
 .extra-link {
     font-size: 10px;
    
+}
+
+.home-link {
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1000px) {
