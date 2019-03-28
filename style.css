@@ -485,8 +485,8 @@ main {
 }
 
 .product.person {
-    display: grid;
-    grid-template-rows: 20rem auto;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 
